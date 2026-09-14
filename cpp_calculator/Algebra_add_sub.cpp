@@ -3,11 +3,13 @@ using namespace std;
 
 float a;
 float b;
-string op;
+char op;
+char ans;
 
 int main()
 {
-    cout<< "Input the first number. ex: 1.00332" << endl; 
+ while true {
+    cout<< "Input the first number. ex: 1.00332\n"; 
     //cout << "user input: " , I want to maybe make this appear right next to where the input goes in the terminal
     /*
     example:
@@ -17,23 +19,20 @@ int main()
 
     */
     cin >> a;
-      cout<< "User input: " << a;
-            cout << " " << endl;
-            cout << " " << endl;
-      cout<< "input the second number: " << endl;
+      cout<< "User input: %f\n", a;
+      cout<< "input the second number: \n";
+
       cin >> b;
-      cout<< "User input: " << b;
-            cout << " " << endl;
-            cout << " " << endl;
-      cout<< "choose an operator. Ex 'plus or 'minus' in lower case letters" << endl;
+      cout<< "User input: %f\n", b;
+
+      cout<< "choose an operator (Options: +, -, *, /, %)\n";
       cin >> op;
-      cout<< "User input: " << op;
-            cout << " " << endl;
-            cout << " " << endl;
-      string answer;
-      if (op == "plus"){
-        cout << "Did you mean to pick 'plus'? 'Y' / 'N' " << endl;
-        cin >> answer; 
+      cout<< "User input: %s\n", op;
+
+ //Now a mass switch case to actually check if they wanted to do the thing or not
+      if (op == "+"){
+        cout << "Did you mean to pick 'addition'? 'Y' / 'N' " << endl;
+        cin >> ans; 
             if (answer == "Y"){
                 float plus = a + b;
                 cout << a << " + " << b << " = " << plus << endl;
@@ -71,5 +70,7 @@ int main()
             cout << " " << endl;
             cout << " " << endl;
     cout << "Thank you, user! I hope you found the answer you were looking for!"<< endl;
-    return (0);
+}
+    
+return (0);
 }
