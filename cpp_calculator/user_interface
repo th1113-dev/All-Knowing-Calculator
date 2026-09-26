@@ -1,46 +1,56 @@
 #include <iostream> /* along with the classes/libraries made for Linalg, DE, Algebra, and calc 1-3 */
 using namespace std;
 
-int a, c
+int a,c
 char b
-int main(){
 
+int main(){
+		
+	/*Add step numbers to keep the place in the code trackable*/
 	cout<<"please select an  operation by inputting a number\n"<< "\n" << "1 - Algebra\n" << "2 - Geometry\n" << "3 - Trigonometry\n" << "4 - Calculus\n" << "5 - Linear Algebra\n" << "6 - Diff. EQ";
 	cin >> a;
 
+/*for all items in the switch case, I hope to make it so that each either moves into the operaion or sets off some kind of flag that helps the code continue*/
 	switch{
 		case 1:
-			if a = 1{
+			if a == 1{
 				cout << "Confirm selection: Algebra - Y/N";
 				cin >> b;
+			/*for example:
+				if b == Y
+					c = 1;
+				else
+					c = 0;
+					cout << "Returning to beginning";	
+					*/
 		break;
 		
 		case 2:
-                        if a = 2{
+                        if a == 2{
                                 cout << "Confirm selection: Geometry - Y/N";
                                 cin >> b;   
                 break;           
    		
 		case 3:          
-                        if a = 3{
+                        if a == 3{
                                 cout << "Confirm selection: Trigonometry - Y/N";
                                 cin >> b;
                 break;
 
 		case 4:          
-                        if a = 4{
+                        if a == 4{
                                 cout << "Confirm selection: Calculus - Y/N";
                                 cin >> b;
                 break;
 		
 		case 5:          
-                        if a = 5{
+                        if a == 5{
                                 cout << "Confirm selection: Linear Algebra - Y/N";
                                 cin >> b;
                 break;
 
    		case 6:          
-                        if a = 6{
+                        if a == 6{
                                 cout << "Confirm selection: Differential Equations - Y/N";
                                 cin >> b;
                 break;
@@ -48,6 +58,7 @@ int main(){
 				}
 	}
 	
+	/* the int c is going to be the flag that triggers the next steps. I can ask for more user input if needed after this for each one of the operations using an if/else loop*/
 	
 return(0);
 }
